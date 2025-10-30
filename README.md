@@ -1,102 +1,61 @@
-# Quality_Assurance_project
-🧪 Automated Login Testing with Selenium
-📌 Project Overview
-This project automates login functionality testing using Selenium with Python and Pytest.
-It verifies both valid and invalid login attempts on a web application and captures screenshots of failures.
-Each test result is logged in:
+# 🧪 Quality_Assurance_Project  
+## Automated Login Testing with Selenium  
 
-✅ HTML Report → report.html
-⚠️ Defect Log → defects_log.csv
-📸 Screenshots Folder → /screenshots
+### 📌 Project Overview  
+This project automates **login functionality testing** for a web application using **Selenium**, **Python**, and **Pytest**.  
+It validates both **valid and invalid login attempts**, captures screenshots of failures, and generates detailed **test reports** and **defect logs**.
+
+**Key Outputs:**  
+- ✅ **HTML Test Report:** `report.html`  
+- ⚠️ **Defect Log:** `defects_log.csv`  
+- 📸 **Screenshots Folder:** `/screenshots`  
+
+---
+
+### ⚙️ Prerequisites  
+
+#### 🔧 Software Requirements  
+- **Python 3.8+**  
+- **Google Chrome Browser**  
+- **ChromeDriver** *(auto-installed via `webdriver_manager`)*  
+
+#### 📦 Python Libraries  
+Install all required dependencies using:
+```bash
+pip install -r requirements.txt
 
 
-Install selenium
-pip install selenium
-Install Python 3.10+ (if not installed).
-
-Install pip packages:
-
-cd QA_Login_Test/selenium_tests
+Step 1: Create & Activate Virtual Environment
+cd selenium_tests
 python -m venv venv
-# Activate virtualenv:
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-pip install selenium pytest webdriver-manager
-
-📁 Project Structure
-F:\QA_Login_Test\
-│
-├── selenium_tests/
-│   ├── test_login_valid.py
-│   ├── test_login_invalid.py
-│   ├── conftest.py
-│   ├── defect_logger.py
-│   ├── screenshots/           ✅ keep screenshots here
-│   ├── report.html            ✅ main report
-│
-├── defects_log.csv            ✅ shows logged defect
-└── README.md
 
 
+Activate the environment:
+Windows: venv\Scripts\activate
+macOS/Linux: source venv/bin/activate
 
-⚙️ Prerequisites
-Before running, make sure you have the following installed:
-🔧 Software
-Python 3.8 or later
-Google Chrome Browser
-ChromeDriver (auto-installed by webdriver_manager)
+Step 2: Install Dependencies
+pip install selenium pytest pytest-html webdriver-manager
 
-📦 Python Libraries
-Install required dependencies: OPEN CMD
-     pip install -r requirements.txt
-
-If requirements.txt is missing, create it with the following content:
-selenium
-pytest
-pytest-html
-webdriver-manager
-
-
-▶️ How to Run the Tests
-1️⃣ Run All Tests
-In your project folder, run:
-pytest confest.py --html=report.html --self-contained-html
+Execute Tests
+Run all tests and generate the HTML report:
+pytest conftest.py --html=report.html --self-contained-html
 
 This command:
-Executes all test cases
+Runs all test cases
 Generates a detailed HTML report
-Saves the report as report.html in your project directory
+Saves it as report.html in the project directory
+Captures screenshots automatically when any test fails
 
-2️⃣ View the Report
-After the run, open:
-report.html
-in any browser to view test results.
-
-
-📸 Screenshot Capture Logic
-Screenshots are auto-captured on every failed test.
-Files are named with timestamps like:
-test_invalid_login_20251030_203012.png
-They are stored in the /screenshots folder for easy review.
-
-
-
-🧾 Logging Defects
-If a test fails, it automatically logs details in defects_log.csv:
-Test CaseUsernamePasswordExpected ResultActual ResultTimestampInvalid LoginstudentwrongpasswordInvalid username or passwordLogin success page2025-10-30 20:35:00
-
-🧰 Example Run Summary
-After test execution:
-Report: report.html
-Defects logged in: defects_log.csv
-Screenshots saved in: /screenshots
-
-
+Step 4: View Results
+After execution:
+📄 Report: Open report.html in any browser
+⚠️ Defects: Check defects_log.csv
+📸 Screenshots: Found in /screenshots folder
 
 🧑‍💻 Author
-Aisha Vel Tech, Chennai
-B.E Computer Science Engineering
-Project: Automated Web Login Testing using Selenium and Pytest
+S.Aisha Siddika
+B.Tech. Computer Science Engineering
+Vel Tech, Chennai
+
+📘 Project: Automated Web Login Testing using Selenium and Pytest
